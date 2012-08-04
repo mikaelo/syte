@@ -4,7 +4,10 @@ from django.shortcuts import redirect, render
 from django.template import Context, loader
 from django.http import HttpResponse, HttpResponseServerError, Http404
 from django.conf import settings
+from pybars import Compiler
+from datetime import datetime
 
+import os
 import requests
 import json
 import oauth2 as oauth
@@ -99,44 +102,51 @@ def dribbble(request, username):
 
 
 def blog(request):
-    r = requests.get('{0}/posts?api_key={1}'.format(settings.TUMBLR_API_URL,
-        settings.TUMBLR_API_KEY))
+    offset = request.GET.get('o', 0)
+    r = requests.get('{0}/posts?api_key={1}&offset={2}'.format(settings.TUMBLR_API_URL,
+        settings.TUMBLR_API_KEY, offset))
     return HttpResponse(content=r.text, status=r.status_code,
                         content_type=r.headers['content-type'])
 
 
 def blog_post(request, post_id):
-    return render(request, 'index.html', {'post_id': post_id})
+    context = dict()
 
-
-def blog_post_ajax(request, post_id):
-    if request.is_ajax():
-        r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
+    r = requests.get('{0}/posts?api_key={1}&id={2}'.format(settings.TUMBLR_API_URL,
             settings.TUMBLR_API_KEY, post_id))
-        return HttpResponse(content=r.text, status=r.status_code,
-                        content_type=r.headers['content-type'])
 
-    return render(request, 'index.html', {'post_id': post_id})
+    if r.status_code == 200:
+        post_response = r.json.get('response', {})
+        posts = post_response.get('posts', [])
 
+        if posts:
+            post = posts[0]
+            f_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M:%S %Z')
+            post['formated_date'] = f_date.strftime('%B %d, %Y')
 
+            if settings.DISQUS_INTEGRATION_ENABLED:
+                post['disqus_enabled'] = True
+
+            path_to_here = os.path.abspath(os.path.dirname(__file__))
+            f = open('{0}/static/templates/blog-post-{1}.html'.format(path_to_here, post['type']), 'r')
+            f_data = f.read()
+            f.close()
+
+            compiler = Compiler()
+            template = compiler.compile(unicode(f_data))
+            context['post_data'] = template(post)
+            context['post_title'] = post.get('title', None)
+
+    return render(request, 'blog-post.html', context)
 
 
 def blog_tags(request, tag_slug):
-    #Due to the issue with the tumblr api described below we will redirect to the
-    #users tumblr tags page for now.
-    return redirect('http://{0}/tagged/{1}'.format(
-        settings.TUMBLR_BLOG_URL, tag_slug))
-
+    offset = request.GET.get('o', 0)
     if request.is_ajax():
-        #Important!!! This request doesn't work for now. There is a bug filed with
-        #tumblr where the array of posts are always being returned empty. For now I'll
-        #point directly to tumblr's url.
-        #https://groups.google.com/d/topic/tumblr-api/9KfQZPKqcgA/discussion
-        r = requests.get('{0}/posts/text?api_key={1}&tag={2}'.format(settings.TUMBLR_API_URL,
-                settings.TUMBLR_API_KEY, tag_slug))
-        return HttpResponse(content=json.loads(r.text), status=r.status_code,
+        r = requests.get('{0}/posts?api_key={1}&tag={2}&offset={3}'.format(settings.TUMBLR_API_URL, 
+            settings.TUMBLR_API_KEY, tag_slug, offset))
+        return HttpResponse(content=r.text, status=r.status_code,
                 content_type=r.headers['content-type'])
-
     return render(request, 'index.html', {'tag_slug': tag_slug})
 
 
@@ -215,4 +225,22 @@ def instagram_next(request, max_id):
                         content_type=media_r.headers['content-type'])
 
 
+def lastfm(request, username):
+    url = '{0}?method=user.getrecenttracks&user={1}&api_key={2}&format=json'.format(
+                                                    settings.LASTFM_API_URL,
+                                                    settings.LASTFM_USERNAME,
+                                                    settings.LASTFM_API_KEY)
+    tracks = requests.get(url)
+    url = '{0}?method=user.getinfo&user={1}&api_key={2}&format=json'.format(
+                                                    settings.LASTFM_API_URL,
+                                                    settings.LASTFM_USERNAME,
+                                                    settings.LASTFM_API_KEY)
+    user = requests.get(url)
+    context = {
+        'user_info': user.json,
+        'recenttracks': tracks.json,
+    }
+
+    return HttpResponse(content=json.dumps(context), status=user.status_code,
+                        content_type=user.headers['content-type'])
 

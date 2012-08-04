@@ -4,7 +4,7 @@ Syte is a really simple but powerful packaged personal site that has social inte
 
 ### There is only one rule
 
-You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones above. The image needs to bee 60x60 px.
+You can use, reproduce and do whatever you want with syte but I would like you to choose a different adjacent color as the ones used by the people below. Once you have chosen your color and deployed your Syte based site, please send a pull request with an image of you containing the color on the border like the ones below. The image needs to be 60x60 px.
 
 [![rigoneri](https://github.com/rigoneri/syte/blob/master/readme-imgs/rigoneri.png?raw=true)](http://rigoneri.com)
 [![sambao21](https://github.com/rigoneri/syte/blob/master/readme-imgs/sambao21.png?raw=true)](http://sambao21.com)
@@ -16,6 +16,37 @@ You can use, reproduce and do whatever you want with syte but I would like you t
 [![href](https://github.com/rigoneri/syte/blob/master/readme-imgs/href.png?raw=true)](http://blog.stacktrace.ch)
 [![aristidesfl](https://github.com/rigoneri/syte/blob/master/readme-imgs/aristidesfl.png?raw=true)](http://aristidesfl.herokuapp.com)
 [![aureax](https://github.com/rigoneri/syte/blob/master/readme-imgs/aureax.png?raw=true)](http://aureax.xn--hwg34fba.ws)
+[![evilfaeton](https://github.com/rigoneri/syte/blob/master/readme-imgs/evilfaeton.png?raw=true)](http://evilfaeton.com)
+[![eveiga](https://github.com/rigoneri/syte/blob/master/readme-imgs/eveiga.png?raw=true)](http://eveiga.herokuapp.com)
+[![mikaelo](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikaelo.png?raw=true)](http://mikaelo.herokuapp.com)
+[![mikehodgson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mikehodgson.png?raw=true)](http://mikehodgson.com)
+[![charliekey](https://github.com/rigoneri/syte/blob/master/readme-imgs/charliekey.png?raw=true)](http://charliekey.me)
+[![andrewthebold](https://github.com/rigoneri/syte/blob/master/readme-imgs/andrewthebold.png?raw=true)](http://atb.herokuapp.com/)
+[![BobuSumisu](https://github.com/rigoneri/syte/blob/master/readme-imgs/oyvind-ingvaldsen.png?raw=true)](http://oyvind-ingvaldsen.net)
+[![nurihodges](https://github.com/rigoneri/syte/blob/master/readme-imgs/nurihodges.png?raw=true)](http://nurihodges.herokuapp.com)
+[![markwatson](https://github.com/rigoneri/syte/blob/master/readme-imgs/mrkrwtsn.png?raw=true)](http://markwatson.us)
+[![manavo](https://github.com/rigoneri/syte/blob/master/readme-imgs/manavo.png?raw=true)](http://manavo.com)
+[![rshepherd](https://github.com/rigoneri/syte/blob/master/readme-imgs/rshepherd.png?raw=true)](http://rshepherd.org)
+[![wavendano](https://github.com/rigoneri/syte/blob/master/readme-imgs/wavendano.png?raw=true)](http://willieavendano.me)
+[![yurytsukerman](https://github.com/rigoneri/syte/blob/master/readme-imgs/yurytsukerman.png?raw=true)](http://yurytsukerman.com)
+[![javisoto](https://github.com/rigoneri/syte/blob/master/readme-imgs/javisoto.png?raw=true)](http://www.javisoto.es)
+[![joneisen](https://github.com/rigoneri/syte/blob/master/readme-imgs/joneisen.png?raw=true)](http://www.joneisen.me)
+[![natetarrh](https://github.com/rigoneri/syte/blob/master/readme-imgs/natetarrh.png?raw=true)](http://www.natetarrh.com)
+[![arnonate](https://github.com/rigoneri/syte/blob/master/readme-imgs/arnonate.png?raw=true)](http://natearnold.me)
+[![mobileiteration](https://github.com/rigoneri/syte/blob/master/readme-imgs/mobileiteration.png?raw=true)](http://mobileiteration.com)
+[![owen](https://github.com/rigoneri/syte/blob/master/readme-imgs/owen.png?raw=true)](http://owened.co.nz)
+[![danielcampo](https://github.com/rigoneri/syte/blob/master/readme-imgs/danielcampo.png?raw=true)](http://danielcampo.com)
+[![bhashkar](https://github.com/rigoneri/syte/blob/master/readme-imgs/bhashkar.png?raw=true)](http://bhashkar.me)
+[![lukelee](https://github.com/rigoneri/syte/blob/master/readme-imgs/lukelee.png?raw=true)](http://lukelee-syte.herokuapp.com)
+[![dannycochran](https://github.com/rigoneri/syte/blob/master/readme-imgs/dannycochran.png?raw=true)](http://dcochran.com)
+[![srir](https://github.com/rigoneri/syte/blob/master/readme-imgs/srir.png?raw=true)](http://sraghavan.net)
+[![tachang](https://github.com/rigoneri/syte/blob/master/readme-imgs/jeff-tchang.png?raw=true)](http://www.returnbooleantrue.com)
+[![junseki](https://github.com/rigoneri/syte/blob/master/readme-imgs/junseki.png?raw=true)](http://junseki.com)
+[![allydimg](https://github.com/rigoneri/syte/blob/master/readme-imgs/allydimg.png?raw=true)](http://allyd.herokuapp.com)
+[![hussfelt](https://github.com/rigoneri/syte/blob/master/readme-imgs/hussfelt.png?raw=true)](http://hussfelt.net)
+[![amastys](https://github.com/rigoneri/syte/blob/master/readme-imgs/amastys.png?raw=true)](http://amastys.ru)
+[![damilare](https://github.com/rigoneri/syte/blob/master/readme-imgs/damilare.png?raw=true)](http://dami.me)
+
 
 ## Social Integrations
 
@@ -50,6 +81,14 @@ Syte has dribbble integration, which means that when someone clicks on a link th
 Syte has instagram integration, which means that you can show your instagram pictures within your site like a profile. Currently the only way to display your pictures is through their iPhone and Android apps, this is not even possible through their website.
 
 ![Syte Instagram](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-5.png?raw=true)
+
+
+### Last.fm
+
+Syte has Last.fm integration, which means that when someone clicks on a link that points to a user's Last.fm profile the profile information will be loaded directly in the site along with a listing of the most recently scrobbled tracks.
+
+![Syte Lastfm](https://github.com/rigoneri/syte/blob/master/readme-imgs/f-6.png?raw=true)
+
 
 ## Responsive UI
 
@@ -117,6 +156,10 @@ Once you have your tumblr blog you will need to get the `api_key` needed to call
 
 Once you have the `api_key` from tumblr you have to enter it in **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the key under `TUMBLR_API_KEY`, also please enter your tumblr url under `TUMBLR_BLOG_URL` see the example on how it should be formatted.
 
+#### Comments
+
+Comments are available through [Disqus](http://disqus.com/) in order to get yours setup, make sure to signup through their website. Once you are done you will be given a disqus shortname. Grab the shortname and enter it in **syte_settings.py** under `DISQUS_SHORTNAME`, also make sure to have `DISQUS_INTEGRATION_ENABLED` set to True in order to work.
+
 
 
 
@@ -145,7 +188,7 @@ Github has the same level of security as Twitter, but they don't provide a butto
 
 Enter the ***Application Name***, ***Main URL*** and ***Callback URL***. For the Callback URL enter `http://127.0.0.1:8000/github/auth` for now since we will get the access token while running it locally. Once you are done regestering your application you will be given the ***Client ID*** and ***Client Secret***.
 
-Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syste_settings.py`. Once you open that file enter the following:
+Once you have those two items from Github you have to enter them in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
 
 * ***Client ID*** under `GITHUB_CLIENT_ID`
 * ***Client Secret*** under `GITHUB_CLIENT_SECRET`
@@ -189,6 +232,22 @@ Once you have those two items from Instagram you have to enter them in your **sy
 After you validated that your instagram integration worked go back to Instragam page and change the ***OAuth redirect_uri*** field to have your domain info (this is not required), then make sure you turn off the instagram oauth interation setting so you don't make that available to everyone in the internet. You can do that by setting `INSTAGRAM_OAUTH_ENABLED` to False.
 
 If you want to turn off instagram integration just set `INSTAGRAM_INTEGRATION_ENABLED` to False.
+
+
+
+
+### Setting up Last.fm integration
+
+The Last.fm integration does not make any authenticated calls so setting it up only requires that you register an application with Lastfm and get an API key.
+
+To get an API key simply follow the [Getting started instructions](http://www.last.fm/api).  You can then view your API Key from [your api account page](http://www.last.fm/api/account).
+
+Once you have your API Key from Lastfm you have to enter it in your **syte_settings.py** located in `syte > syte_settings.py`. Once you open that file enter the following:
+
+* ***API_KEY*** under `LASTFM_API_KEY`
+* ***USERNAME*** under `LASTFM_USERNAME`
+
+If you want to turn off Last.fm integration just set `LASTFM_INTEGRATION_ENABLED` to False.
 
 
 
@@ -238,7 +297,7 @@ sudo npm install less -g
 sudo npm install uglify-js -g
 ```
 
-`Note` be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
+`Note` windows users be sure to create the directories `syte > static > css` and `syte > static > js > min` first if it doesn't already exist.
 
 Then whenever you want to release a new version of static update the `COMPRESS_REVISION_NUMBER` in **syte-settings.py** and run the compress python command from your syte directory:
 
@@ -247,6 +306,8 @@ python compress.py
 ```
 
 This will create a minified version of your CSS in `syte > static > css` and the minified version of your JavaScript in `syte > static > js > min`.
+
+`Note` If you are using Windows and is having problems on compressing statics checkout issue [#14](https://github.com/rigoneri/syte/issues/14) to see if it helps.
 
 
 ### Deploying to Heroku

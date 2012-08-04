@@ -7,6 +7,9 @@ TUMBLR_BLOG_URL = 'aventuristo.tumblr.com'
 TUMBLR_API_URL = 'http://api.tumblr.com/v2/blog/{0}'.format(TUMBLR_BLOG_URL)
 TUMBLR_API_KEY = 'dc2VOYTyK4GAhuRQooiZmwIccVUM0EpuQKCXq1p3L5ckAHLLgm'
 
+#RSS Feed Integration: (by default use Tumbrl rss feed)
+RSS_FEED_ENABLED = True
+RSS_FEED_URL = 'http://{0}/rss'.format(TUMBLR_BLOG_URL)
 
 #Twitter Integration
 TWITTER_INTEGRATION_ENABLED = True
@@ -45,6 +48,22 @@ INSTAGRAM_CLIENT_ID = '85ef042e9cdd428b9c5ecf9b117f265c'
 INSTAGRAM_CLIENT_SECRET = '505982846b9b4a51b985b85d55f28a48'
 INSTAGRAM_OAUTH_AUTHORIZE_URL = 'https://api.instagram.com/oauth/authorize'
 INSTAGRAM_OAUTH_ACCESS_TOKEN_URL = 'https://api.instagram.com/oauth/access_token'
+
+
+#Google Analytics
+GOOGLE_ANALYTICS_TRACKING_ID = ''
+
+
+#Disqus Integration
+DISQUS_INTEGRATION_ENABLED = False
+DISQUS_SHORTNAME = ''
+
+
+#Lastfm Integration
+LASTFM_INTEGRATION_ENABLED = True
+LASTFM_API_URL = 'http://ws.audioscrobbler.com/2.0/'
+LASTFM_API_KEY = '[ENTER LASTFM API_KEY HERE, SEE LASTFM SETUP INSTRUCTIONS]'
+LASTFM_USERNAME = '[ENTER LASTFM username HERE, SEE LASTFM SETUP INSTRUCTIONS]'
 
 
 if DEPLOYMENT_MODE == 'dev':

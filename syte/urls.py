@@ -1,4 +1,4 @@
-
+from django.http import HttpResponse
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 
@@ -7,10 +7,8 @@ handler500 = 'syte.views.server_error'
 
 urlpatterns = patterns('',
     url(r'^post/(?P<post_id>\w+)/?$', 'syte.views.blog_post'),
-    url(r'^post/ajax/(?P<post_id>\w+)/?$', 'syte.views.blog_post_ajax'),
     url(r'^tags/(?P<tag_slug>\w+)/?$', 'syte.views.blog_tags'),
     url(r'^blog.json/?$', 'syte.views.blog'),
-
     url(r'^about/?$', 'syte.views.home'),
     url(r'^/?$', 'syte.views.home'),
 )
@@ -51,7 +49,11 @@ if settings.INSTAGRAM_INTEGRATION_ENABLED:
         url(r'^instagram/?$', 'syte.views.instagram'),
     )
 
-
+#LastFM Integration
+if settings.LASTFM_INTEGRATION_ENABLED:
+    urlpatterns += patterns('',
+        url(r'^lastfm/(?P<username>\S+)/?$', 'syte.views.lastfm'),
+    )
 
 #Statics: Hacky for now... fix this later...
 urlpatterns += patterns('',
